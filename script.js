@@ -1,24 +1,4 @@
 
-// fetch("student.json")
-// .then(response => {return response.json()})
-// .then(data => {
-//     let placeholder = document.querySelector("#tbody-Data");
-//     let tableData = "";
-//     for (const studentDetails of data) {
-//         tableData += `
-//             <tr>
-//                 <td>${studentDetails.id}</td>
-//                 <td><img src="${studentDetails.img_src}"> ${studentDetails.first_name} ${studentDetails.last_name}</td>
-//                 <td>${studentDetails.gender}</td>
-//                 <td>${studentDetails.class}</td>
-//                 <td>${studentDetails.marks}</td>
-//                 <td>${studentDetails.passing ? 'Passed' : 'Failed'}</td>
-//                 <td>${studentDetails.email}</td>
-//             </tr>
-//         `
-//     }
-//     placeholder.innerHTML = tableData;
-// })
 
 document.addEventListener("DOMContentLoaded", function () {
     let studentData = []; // Initialize an empty array to store student data
@@ -41,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${student.id}</td>
-                <td>${student.first_name} ${student.last_name}</td>
+                <td><img src="${student.img_src}"> ${student.first_name} ${student.last_name}</td>
                 <td>${student.gender}</td>
                 <td>${student.class}</td>
                 <td>${student.marks}</td>
